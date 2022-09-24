@@ -1,0 +1,56 @@
+@import url("./Product.css");
+
+.container {
+    margin: 20rem 4rem;
+    padding: 0 1rem;
+}
+
+.container .introduce {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.container .banner-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0099ff14;
+    border-radius: 1rem;
+}
+
+.container .banner-1 ul {
+    list-style: none;
+}
+
+.container .banner-1 ul li b {
+    font-size: 1.8rem;
+}
+
+.container .banner-1 ul li {
+    font-size: 1.5rem;
+}
+
+.container .banner-1 h2 {
+    color: #0434d2;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.container .title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 8rem 0;
+    position: relative;
+    color: #0434d2;
+}
+
+.container .title h3:after {
+    content: "";
+    width: 88%;
+    height: 1px;
+    top: 50%;
+    left: 20rem;
+    background-color: #0099ff;
+    transform: translateY(-50%);
+    position: absolute;
+}

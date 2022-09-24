@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+b {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}

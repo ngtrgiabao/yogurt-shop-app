@@ -1,0 +1,134 @@
+@import url("./Form.css");
+
+.register-form {
+    display: flex;
+    justify-content: start;
+    margin-top: 10rem;
+}
+
+.register-form form {
+    width: 100%;
+}
+
+.register-form fieldset {
+    border: 1px solid #0099ff;
+    padding: 2rem;
+}
+
+.register-form fieldset legend {
+    margin-bottom: 0 !important;
+}
+
+.register-form #register {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.register-form #register .form-body {
+    min-height: 40rem;
+}
+
+.register-form #register::before {
+    content: "";
+    width: 13rem;
+    height: 5rem;
+    right: 0;
+    top: -3rem;
+    position: absolute;
+}
+
+.register-form #register h3,
+.register-form fieldset legend {
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 8rem;
+    color: #0033ff;
+    position: relative;
+}
+
+.register-form #register h3::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #0099ff;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.register-form #register .gender {
+    display: flex;
+}
+
+.register-form #register .gender .male,
+.register-form #register .gender .female {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form #register .gender .female {
+    margin-left: 1rem;
+}
+
+.register-form #register .gender label {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.register-form #register .avatar,
+.register-form #register .gender-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 136, 255);
+}
+
+.register-form #register .accept-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.2rem;
+}
+
+.register-form #register .accept-register input {
+    margin-right: 1rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+}
+
+.register-form #register input[type="file"] {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#register .accept-register .get-notification,
+#register .accept-register .agree-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#register .accept-register .agree-box a {
+    margin-left: 0.5rem;
+    color: #0f39e2;
+    font-weight: bold;
+}
+
+.register-form #register .action-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 22rem;
+}
+
+.register-form #register .action-btn button {
+    width: 10rem;
+    margin-top: 0;
+}

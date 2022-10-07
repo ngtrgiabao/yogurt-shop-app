@@ -1,0 +1,95 @@
+@import url("./Product.css");
+
+.container {
+  margin: 20rem 4rem;
+  padding: 0 1rem;
+}
+
+.container .introduce {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 2rem;
+  font-size: 1.2em;
+  word-break: break-word;
+}
+
+.container .introduce p {
+  padding: 2rem;
+  background-color: rgba(0, 153, 255, 0.199);
+  border-radius: 1rem;
+}
+
+.container .banner-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0099ff14;
+  border-radius: 1rem;
+}
+
+.container .banner-1 ul {
+  list-style: none;
+}
+
+.container .banner-1 ul li {
+  font-size: 1.5rem;
+}
+
+.container .banner-1 h2 {
+  color: #0434d2;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.container .title {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 8rem 0;
+  position: relative;
+  color: #0434d2;
+}
+
+.container .title h3:after {
+  content: "";
+  width: 88%;
+  height: 1px;
+  top: 50%;
+  left: 20rem;
+  background-color: #0099ff;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.about-container .video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  border-radius: 1rem;
+  width: 70%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.go-top {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 999;
+  display: none;
+}
+
+.go-top img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.show {
+  display: block !important;
+}

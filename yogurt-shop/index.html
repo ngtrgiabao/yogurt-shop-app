@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang chủ</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            href="./assests/images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" id="index">
+            <div id="logo">
+                <a href="#"
+                    ><img
+                        loading="lazy"
+                        src="./assests/images/logo.png"
+                        alt=""
+                    />
+
+                    <span class="name">Bao's Yougurt</span>
+                    <span id="id">B2012063</span>
+                </a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path
+                        fill="#0099ff"
+                        fill-opacity="1"
+                        d="M0,224L80,197.3C160,171,320,117,480,117.3C640,117,800,171,960,176C1120,181,1280,139,1360,117.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+                    ></path>
+                </svg>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="./index.html"> Home </a>
+                    </li>
+                    <li>
+                        <a href="./About.html"> Giới thiệu </a>
+                    </li>
+                    <li>
+                        <a href="./Product.html"> Sản phẩm </a>
+                    </li>
+                    <li>
+                        <a href="./News.html"> Tin tức </a>
+                    </li>
+                    <li>
+                        <a href="#footer"> Liên hệ </a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-btn">
+                            Đăng nhập
+
+                            <form action="" class="login-form" id="login">
+                                <span>Login</span>
+                                <div class="form-body">
+                                    <div class="username">
+                                        <label for="username"
+                                            >Tên đăng nhập</label
+                                        >
+                                        <input
+                                            id="username"
+                                            type="text"
+                                            placeholder="Tên đăng nhập"
+                                            maxlength="10"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="password">
+                                        <label for="password">Mật khẩu</label>
+                                        <input
+                                            id="password"
+                                            type="password"
+                                            placeholder="Mật khẩu [*, 0-9, a-z]"
+                                            maxlength="20"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="remember-psw">
+                                        <input type="checkbox" />
+                                        <label for=""
+                                            >Ghi nhớ cho lần đăng nhập
+                                            sau?</label
+                                        >
+                                    </div>
+
+                                    <a href="#">Bạn quên mật khẩu?</a>
+                                </div>
+
+                                <button type="submit">Đăng nhập</button>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Tìm kiếm sản phẩm -->
+                <div class="search">
+                    <input
+                        type="text"
+                        placeholder="Tìm kiếm sản phẩm tại đây"
+                    />
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <span class="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Container -->
+        <div class="container" onscroll="handleScroll">
+            <div class="introduce">
+                <p>
+                    <strong>Sữa chua </strong>là một loại thực phẩm được tạo ra từ quá trình lên men
+                    sữa của các vi khuẩn. Hầu hết các loại sữa đều có thể dùng làm
+                    sữa chua, tuy nhiên sữa bò là được dùng nhiều hơn hết. Sữa chua
+                    hay được gọi là yaourt (là da-ua). Chúng được lên men từ sữa
+                    động vật nhờ vi khuẩn lactic, đã được khử chất béo và thanh
+                    trùng ở nhiệt độ 80 - 90 độ C.
+                </p>
+                
+                <p>
+                    <strong>Sữa chua có 2 loại cơ bản là </strong>
+                    sữa chua có đường và sữa chua không đường. Bên cạnh đó còn có loại
+                    sữa chua uống, sữa chua men sống. Váng sữa thường được chia làm
+                    3 loại dựa vào hàm lượng chất béo có trong sản phẩm: váng sữa có
+                    hàm lượng chất béo cao nhất (35-50% chất béo), váng sữa thông
+                    thường (10-30% chất béo), váng sữa nguyên kem (6-15% chất béo). 
+                </p>
+                
+                <p>
+                    <strong>Tuy nhiên </strong>đa phần đều chọn mua sữa chua
+                    công nghiệp đã được đóng hộp bán sẵn tại các siêu thị và cửa
+                    hàng hơn là sữa chua tự làm tại nhà. Như vậy, liệu sữa chua nhà
+                    làm và sữa chua công nghiệp thì loại nào tốt sức khỏe của chúng
+                    ta hơn? Nếu là một người yêu thích nấu ăn bạn sẽ chọn sữa nhà
+                    làm hay mua sữa chua công nghiệp bên ngoài. Sữa chua nhà làm đảm
+                    bảo về độ an toàn, chất lượng cũng như giá thành rẻ.
+                </p>
+            </div>
+
+            <div class="banner-1">
+                <img
+                    loading="lazy"
+                    src="https://www.thmilk.vn/wp-content/uploads/2020/09/SCA-Chanh-day-457x396.png"
+                    alt=""
+                />
+
+                <div>
+                    <h2>
+                        Gợi ý các món ăn cùng Yaourt có thể chế biến thành một
+                        số món tráng miệng hấp dẫn:
+                        <br />
+                        <br />
+                    </h2>
+                    <ul>
+                        <li>
+                            <strong>Yaourt trộn trái cây</strong> : Táo, lê,
+                            thanh long... gọt vỏ thái hạt lựu. Nho lột vỏ, bỏ
+                            hạt. Trộn hỗn hợp trên cùng 1 hũ yaourt.
+                        </li>
+                        <li>
+                            <strong>Yaourt dâu</strong>: Lấy 100g dâu tây, rửa
+                            sạch, cho vào máy xay sinh tố xay mịn cùng 1 hũ
+                            yaourt.
+                        </li>
+                        <li>
+                            <strong>Yaourt trộn</strong> cùng đá bào mịn, khi
+                            dùng cho thêm chút cà phê và vài lát chanh sẽ có
+                            hương vị thơm ngon hơn.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sản phẩm -->
+            <span class="title">
+                <h3>Sản phẩm</h3>
+            </span>
+            <div class="products">
+                <div class="product product-1">
+                    <a href="./Product.html">
+                        <img
+                            loading="lazy"
+                            src="./assests/images/blackberry.jpg"
+                            alt=""
+                        />
+
+                        <p class="product-title">Blackberry</p>
+
+                        <p>
+                            Quả mâm xôi là loại quả ăn họ hoa hồng, có nguồn gốc
+                            từ châu Âu, Bắc Á và được trồng ở các vùng ôn đới
+                            trên toàn thế giới. Có nhiều loại, bao gồm đen, tím
+                            và vàng
+                        </p>
+                    </a>
+                </div>
+                <div class="product product-2">
+                    <a href="./Product.html">
+                        <img
+                            loading="lazy"
+                            src="./assests/images/blueberry.jpg"
+                            alt=""
+                        />
+
+                        <p class="product-title">Blueberry</p>
+
+                        <p>
+                            Quả việt quất chứa các dưỡng chất tốt cho sức khỏe
+                            như chất xơ, kali, folate, vitamin C và vitamin B6
+                            (những chất hỗ trợ rất tốt cho sức khỏe của tim)
+                        </p>
+                    </a>
+                </div>
+                <div class="product product-3">
+                    <a href="./Product.html">
+                        <img
+                            loading="lazy"
+                            src="./assests/images/cantaloupe.jpg"
+                            alt=""
+                        />
+
+                        <p class="product-title">Cantaloupe</p>
+
+                        <p>
+                            Trong dưa lưới chứa rất nhiều vitamin C có tác dụng
+                            làm đẹp da hiệu quả. Phụ nữ ăn sinh tố dưa lưới
+                            thường xuyên sẽ có làn da mịn màng.
+                        </p>
+                    </a>
+                </div>
+                <div class="product product-4">
+                    <a href="./Product.html">
+                        <img
+                            loading="lazy"
+                            src="./assests/images/kiwi.jpg"
+                            alt=""
+                        />
+
+                        <p class="product-title">Grapes</p>
+
+                        <p>
+                            Hương vị thơm ngon của trái Kiwi xanh, nổi tiếng của
+                            đất nước New Zealand có trong Sữa chua vị Kiwi xanh
+                            đem đến một món ăn nhẹ Siêu ngon và tốt cho hệ tiêu
+                            hóa.
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="banner-2">
+                <img
+                    loading="lazy"
+                    src="https://www.thmilk.vn/wp-content/uploads/2021/04/Banner-All-product.jpg"
+                    alt=""
+                />
+            </div>
+
+            <!-- Form Đăng ký -->
+            <article class="register-form">
+                <form>
+                    <fieldset
+                        id="register"
+                        method="post"
+                        enctype="multipart/form-data"
+                    >
+                        <legend>Register</legend>
+                        <div class="form-body">
+                            <div>
+                                <label class="username" for="name"
+                                    >Tên đăng ký</label
+                                >
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Tên đăng ký"
+                                    maxlength="10"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label class="password" for="psw"
+                                    >Mật khẩu</label
+                                >
+                                <input
+                                    id="psw"
+                                    type="password"
+                                    placeholder="Mật khẩu [*, 0-9, a-z]"
+                                    maxlength="20"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="" class="gender-title"
+                                    >Giới tính</label
+                                >
+                                <div class="gender">
+                                    <div class="male">
+                                        <input
+                                            id="nam"
+                                            type="radio"
+                                            name="gender"
+                                            value="nam"
+                                        />
+                                        <label for="nam">Nam</label>
+                                    </div>
+                                    <div class="female">
+                                        <input
+                                            id="nu"
+                                            type="radio"
+                                            name="gender"
+                                            value="nu"
+                                        />
+                                        <label for="nu">Nữ</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="file" class="avatar"
+                                    >Ảnh đại diện</label
+                                >
+                                <input
+                                    id="file"
+                                    type="file"
+                                    placeholder="Vui lòng chọn hình ảnh để tải lên"
+                                />
+                            </div>
+
+                            <div class="accept-register">
+                                <div class="get-notification">
+                                    <input type="checkbox" /> Nhận thông báo mỗi
+                                    ngày từ chúng tôi
+                                </div>
+                                <div class="agree-box">
+                                    <input type="checkbox" /> Đồng ý các
+                                    <a href="#"
+                                        >Điều khoản và quyền riêng tư
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="action-btn">
+                                <button type="submit">Đăng ký</button>
+                                <button type="reset">Hủy</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </article>
+
+            <a href="#navbar" class="go-top">
+                <img src="./assests/images/top.png" alt="" />
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#0099ff"
+                    fill-opacity="1"
+                    d="M0,128L48,128C96,128,192,128,288,122.7C384,117,480,107,576,112C672,117,768,139,864,156.7C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                ></path>
+            </svg>
+
+            <div class="contact">
+                <p>For more infomation. Please contact us by</p>
+                <ul>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-facebook"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-instagram"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-github"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span>
+                            <i
+                                class="fa-regular fa-envelope"
+                                aria-hidden="true"
+                            ></i>
+                        </span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-twitter"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <span>
+                    <i>&copy;by nguyentrangiabao | </i>
+                    <i>SĐT: 010010001001101</i>
+                </span>
+                <a href="./Contact.html">Liên hệ chúng tôi</a>
+            </div>
+        </footer>
+    </body>
+    <script src="./index.js"></script>
+</html>

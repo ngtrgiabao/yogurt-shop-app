@@ -1,0 +1,11 @@
+@keyframes showForm {
+    0% {
+        transform: translateX(30rem);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

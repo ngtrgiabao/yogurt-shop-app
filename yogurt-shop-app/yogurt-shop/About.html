@@ -1,324 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assests/images/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./about-styles/AboutPage.css" />
-    <title>Về chúng tôi</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header" id="index">
-      <div id="logo">
-        <a href="./index.html"
-          ><img loading="lazy" src="./assests/images/logo.png" alt="" />
-
-          <span class="name">Bao's Yougurt</span>
-          <span id="id">B2012063</span>
-        </a>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#0099ff"
-            fill-opacity="1"
-            d="M0,224L80,197.3C160,171,320,117,480,117.3C640,117,800,171,960,176C1120,181,1280,139,1360,117.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-          ></path>
-        </svg>
-      </div>
-
-      <nav id="navbar">
-        <ul>
-          <li>
-            <a href="./index.html"> Home </a>
-          </li>
-          <li>
-            <a href="./About.html"> Giới thiệu </a>
-          </li>
-          <li>
-            <a href="./Product.html"> Sản phẩm </a>
-          </li>
-          <li>
-            <a href="./News.html"> Tin tức </a>
-          </li>
-          <li>
-            <a href="#footer"> Liên hệ </a>
-          </li>
-          <li>
-            <a href="#" class="login-btn">
-              Đăng nhập
-
-              <form action="" class="login-form" id="login">
-                <span>Login</span>
-                <div class="form-body">
-                  <div class="username">
-                    <label for="username">Tên đăng nhập</label>
-                    <input
-                      id="username"
-                      type="text"
-                      placeholder="Tên đăng nhập"
-                      maxlength="10"
-                      required
-                    />
-                  </div>
-
-                  <div class="password">
-                    <label for="password">Mật khẩu</label>
-                    <input
-                      id="password"
-                      type="password"
-                      placeholder="Mật khẩu [*, 0-9, a-z]"
-                      maxlength="20"
-                      required
-                    />
-                  </div>
-
-                  <div class="remember-psw">
-                    <input type="checkbox" />
-                    <label for="">Ghi nhớ cho lần đăng nhập sau?</label>
-                  </div>
-
-                  <a href="#">Bạn quên mật khẩu?</a>
-                </div>
-
-                <button type="submit">Đăng nhập</button>
-              </form>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Tìm kiếm sản phẩm -->
-      <div class="search">
-        <input type="text" placeholder="Tìm kiếm sản phẩm tại đây" />
-        <span>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </span>
-        <span class="cart">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </span>
-      </div>
-    </header>
-
-    <div class="about-container">
-      <!-- Banner 1 -->
-      <div class="banner-1">
-        <img
-          src="https://www.vinamilk.com.vn/static/uploads/translate/1448008003-4b9bf2019383e13988e30a92491777daa9a6df8a3db6d065174e02026b57097f.png"
-          alt=""
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="./assests/images/favicon.ico"
+            type="image/x-icon"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/about-styles/AboutPage.css" />
+        <title>Về chúng tôi</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" id="index">
+            <div id="logo">
+                <a href="./index.html"
+                    ><img
+                        loading="lazy"
+                        src="./assests/images/logo.png"
+                        alt=""
+                    />
 
-        <div class="banner-1__title">
-          <p class="title-1">Vươn tầm</p>
-          <p class="title-2">thế giới</p>
+                    <span class="name">Bao's Yougurt</span>
+                    <span id="id">B2012063</span>
+                </a>
 
-          <hr />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path
+                        fill="#0099ff"
+                        fill-opacity="1"
+                        d="M0,224L80,197.3C160,171,320,117,480,117.3C640,117,800,171,960,176C1120,181,1280,139,1360,117.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+                    ></path>
+                </svg>
+            </div>
 
-          <p class="banner-1__desription">
-            Chúng tôi đã có mặt ở gần 60 quốc gia và vùng lãnh thổ và là đại
-            diện duy nhất của khu vực Đông Nam Á trong Top 50 Công ty sữa lớn
-            nhất thế giới (thứ hạng: 36).
-            <br /><br />
-            Khi dự án "Sữa chua trân châu" được đặt lên bàn, có rất nhiều câu
-            hỏi bủa vây lấy chúng tôi: Làm sao để nhân bản một món ăn
-            <strong>“đặc sản”</strong> nhưng vẫn đảm bảo chất lượng cho từng sản
-            phẩm? Liệu rằng đây có phải mô hình phát triển bền vững hay chỉ là
-            “cơn sốt” hạ nhiệt theo thời gian? Làm thế nào để tạo tính khác biệt
-            giữa rất nhiềuthương hiệu? Có muôn vàn khó khăn, thử thách khi xây
-            dựng thương hiệu để khiến chúng tôi chùn bước. Nhưng chỉ cân một lý
-            do đủ mạnh để tiếp tục, lý do mà chúng tôi bắt đầu. <br /><br />
-            Anh Phạm Tuấn, được sinh ra trong gia đình có truyền thống làm sữa
-            chua trân châu từ những năm 1990. Món ăn thơm ngon này đã nuôi đưỡng
-            tuổi thơ anh và trở thành niềm nhớ thân thương mỗi khi anh xa nhà.
-            Không chỉ đối với riêng anh Tuấn, sữa chua trân châu đã len lỏi vào
-            từng ngõ ngách thành phố, trở thành món ăn vặt thân thuộc trong tiềm
-            thức của người dân nơi đây. Đã từ lâu, anh luôn ước mơ nhân bản món
-            ăn này, không chỉ dừng lại ở dải đất chữ S, mà còn vươn ra thị
-            trường quôc tế để giới thiệu với bạn bẻ năm châu về tỉnh hoa ẩm thực
-            quê hương. Nhưng ước mơ ấy chỉ thật sự bắt đầu khi anh gặp hai người
-            bạn đồng hành thân thiết sau này. Anh Lê Thanh và anh Nguyễn Minh là
-            hai người bạn thuở thiếu thời. Vào một ngày mùa hè, hai anh có dịp
-            ghé thăm anh Tuấn, thưởng thức sữa chua trân châu . Cuộc gặp gỡ tình
-            cờ này là khởi nguôn ý tưởng của hệ thống Sữa chua trân châu, mà cho
-            tới giờ hay gọi vui với nhau là
-            <i>“cuộc gặp gỡ ngàn tỷ”</i>. Ba chàng trai trẻ năm ấy, dù mới chỉ
-            gặp mà tưởng như đã thân quen từ lâu. Họ cùng chung lý tưởng sống,
-            cùng "phải lòng" với sữa chua trân châu, cùng một ước mơ biến món ăn
-            địa phương này trở thành niềm tự hào dân tộc. <br /><br />
-            Khác với nhiều thương hiệu, <strong>TH MILK </strong> có
-            <a href="#">Xem chi tiết</a>
-          </p>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="./index.html"> Home </a>
+                    </li>
+                    <li>
+                        <a href="./About.html"> Giới thiệu </a>
+                    </li>
+                    <li>
+                        <a href="./Product.html"> Sản phẩm </a>
+                    </li>
+                    <li>
+                        <a href="./News.html"> Tin tức </a>
+                    </li>
+                    <li>
+                        <a href="#footer"> Liên hệ </a>
+                    </li>
+                    <li>
+                        <a href="#" class="login-btn">
+                            Đăng nhập
+
+                            <form action="" class="login-form" id="login">
+                                <span>Login</span>
+                                <div class="form-body">
+                                    <div class="username">
+                                        <label for="username"
+                                            >Tên đăng nhập</label
+                                        >
+                                        <input
+                                            id="username"
+                                            type="text"
+                                            placeholder="Tên đăng nhập"
+                                            maxlength="10"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="password">
+                                        <label for="password">Mật khẩu</label>
+                                        <input
+                                            id="password"
+                                            type="password"
+                                            placeholder="Mật khẩu [*, 0-9, a-z]"
+                                            maxlength="20"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="remember-psw">
+                                        <input type="checkbox" />
+                                        <label for=""
+                                            >Ghi nhớ cho lần đăng nhập
+                                            sau?</label
+                                        >
+                                    </div>
+
+                                    <a href="#">Bạn quên mật khẩu?</a>
+                                </div>
+
+                                <button type="submit">Đăng nhập</button>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Tìm kiếm sản phẩm -->
+            <div class="search">
+                <form action="./searchPage.html" name="frm-search" method="get">
+                    <input
+                        name="words"
+                        type="text"
+                        placeholder="Tìm kiếm sản phẩm tại đây"
+                    />
+                    <span onclick="validationSearch()">
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
+                    </span>
+                </form>
+                <a href="./Buy.html" alt="donhang">
+                    <span class="cart">
+                        <i
+                            class="fa-solid fa-cart-shopping"
+                            aria-hidden="true"
+                        ></i>
+                    </span>
+                </a>
+            </div>
+        </header>
+
+        <div class="about-container">
+            <!-- Banner 1 -->
+            <div class="banner-1">
+                <img
+                    src="https://www.vinamilk.com.vn/static/uploads/translate/1448008003-4b9bf2019383e13988e30a92491777daa9a6df8a3db6d065174e02026b57097f.png"
+                    alt=""
+                />
+
+                <div class="banner-1__title">
+                    <p class="title-1">Vươn tầm</p>
+                    <p class="title-2">thế giới</p>
+
+                    <hr />
+
+                    <p class="banner-1__desription">
+                        Chúng tôi đã có mặt ở gần 60 quốc gia và vùng lãnh thổ
+                        và là đại diện duy nhất của khu vực Đông Nam Á trong Top
+                        50 Công ty sữa lớn nhất thế giới (thứ hạng: 36).
+                        <br /><br />
+                        Khi dự án "Sữa chua trân châu" được đặt lên bàn, có rất
+                        nhiều câu hỏi bủa vây lấy chúng tôi: Làm sao để nhân bản
+                        một món ăn
+                        <strong>“đặc sản”</strong> nhưng vẫn đảm bảo chất lượng
+                        cho từng sản phẩm? Liệu rằng đây có phải mô hình phát
+                        triển bền vững hay chỉ là “cơn sốt” hạ nhiệt theo thời
+                        gian? Làm thế nào để tạo tính khác biệt giữa rất
+                        nhiềuthương hiệu? Có muôn vàn khó khăn, thử thách khi
+                        xây dựng thương hiệu để khiến chúng tôi chùn bước. Nhưng
+                        chỉ cân một lý do đủ mạnh để tiếp tục, lý do mà chúng
+                        tôi bắt đầu. <br /><br />
+                        Anh Phạm Tuấn, được sinh ra trong gia đình có truyền
+                        thống làm sữa chua trân châu từ những năm 1990. Món ăn
+                        thơm ngon này đã nuôi đưỡng tuổi thơ anh và trở thành
+                        niềm nhớ thân thương mỗi khi anh xa nhà. Không chỉ đối
+                        với riêng anh Tuấn, sữa chua trân châu đã len lỏi vào
+                        từng ngõ ngách thành phố, trở thành món ăn vặt thân
+                        thuộc trong tiềm thức của người dân nơi đây. Đã từ lâu,
+                        anh luôn ước mơ nhân bản món ăn này, không chỉ dừng lại
+                        ở dải đất chữ S, mà còn vươn ra thị trường quôc tế để
+                        giới thiệu với bạn bẻ năm châu về tỉnh hoa ẩm thực quê
+                        hương. Nhưng ước mơ ấy chỉ thật sự bắt đầu khi anh gặp
+                        hai người bạn đồng hành thân thiết sau này. Anh Lê Thanh
+                        và anh Nguyễn Minh là hai người bạn thuở thiếu thời. Vào
+                        một ngày mùa hè, hai anh có dịp ghé thăm anh Tuấn,
+                        thưởng thức sữa chua trân châu . Cuộc gặp gỡ tình cờ này
+                        là khởi nguôn ý tưởng của hệ thống Sữa chua trân châu,
+                        mà cho tới giờ hay gọi vui với nhau là
+                        <i>“cuộc gặp gỡ ngàn tỷ”</i>. Ba chàng trai trẻ năm ấy,
+                        dù mới chỉ gặp mà tưởng như đã thân quen từ lâu. Họ cùng
+                        chung lý tưởng sống, cùng "phải lòng" với sữa chua trân
+                        châu, cùng một ước mơ biến món ăn địa phương này trở
+                        thành niềm tự hào dân tộc. <br /><br />
+                        Khác với nhiều thương hiệu, <strong>TH MILK </strong> có
+                        <a href="#">Xem chi tiết</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- video -->
+            <div class="video">
+                <video autoplay loop muted>
+                    <source
+                        src="./assests/video/y2mate.com - Sữa chua TH true YOGURT  Vị Táo Sơ ri mới_1080p.mp4"
+                        type="video/mp4"
+                        srclang="vi"
+                    />
+                    Your browser not support this video
+                </video>
+            </div>
+
+            <!-- Banner 2 -->
+            <div class="banner-2">
+                <div class="banner-2__container">
+                    <p class="banner-2__title-1">Giá trị cốt lõi</p>
+                    <hr />
+                    <p class="banner-2__description">
+                        “Trở thành biểu tượng niềm tin hàng đầu Việt Nam về sản
+                        phẩm dinh dưỡng và sức khỏe phục vụ cuộc sống con người
+                        “
+                    </p>
+
+                    <div class="images">
+                        <!-- Image 1 -->
+                        <span
+                            ><img
+                                loading="lazy"
+                                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_1.png"
+                                alt="hinhanhgioithieu1"
+                            />
+                            <div class="image-body">
+                                <p class="image-title">Chính trực</p>
+                                <p class="image-description">
+                                    Liêm chính, Trung thực trong ứng xử và trong
+                                    tất cả các giao dịch.
+                                </p>
+                            </div>
+                        </span>
+
+                        <!-- Image 2 -->
+                        <span
+                            ><img
+                                loading="lazy"
+                                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_2.png"
+                                alt="hinhanhgioithieu1"
+                            />
+                            <div class="image-body">
+                                <p class="image-title">tôn trọng</p>
+                                <p class="image-description">
+                                    Tôn trọng bản thân, Tôn trọng đồng nghiệp,
+                                    Tôn trọng Công ty, Tôn trọng đối tác, Hợp
+                                    tác trong sự tôn trọng.
+                                </p>
+                            </div>
+                        </span>
+
+                        <!-- Image 3 -->
+                        <span
+                            ><img
+                                loading="lazy"
+                                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_3.png"
+                                alt="hinhanhgioithieu1"
+                            />
+                            <div class="image-body">
+                                <p class="image-title">công bằng</p>
+                                <p class="image-description">
+                                    Công bằng với nhân viên, khách hàng, nhà
+                                    cung cấp và các bên liên quan khác.
+                                </p>
+                            </div>
+                        </span>
+
+                        <!-- Image 4 -->
+                        <span
+                            ><img
+                                loading="lazy"
+                                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_4.png"
+                                alt="hinhanhgioithieu1"
+                            />
+                            <div class="image-body">
+                                <p class="image-title">đạo đức</p>
+                                <p class="image-description">
+                                    Tôn trọng các tiêu chuẩn đã được thiết lập
+                                    và hành động một cách đạo đức.
+                                </p>
+                            </div>
+                        </span>
+
+                        <!-- Image 5 -->
+                        <span
+                            ><img
+                                loading="lazy"
+                                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_5.png"
+                                alt="hinhanhgioithieu1"
+                            />
+                            <div class="image-body">
+                                <p class="image-title">tuân thủ</p>
+                                <p class="image-description">
+                                    Tuân thủ Luật pháp, Bộ Quy Tắc Ứng Xử và các
+                                    quy chế, chính sách, quy định của Công ty.
+                                </p>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#navbar" class="go-top">
+                <img src="./assests/images/top.png" alt="" />
+            </a>
         </div>
-      </div>
 
-      <!-- video -->
-      <div class="video">
-        <video autoplay loop muted>
-          <source
-            src="./assests/video/y2mate.com - Sữa chua TH true YOGURT  Vị Táo Sơ ri mới_1080p.mp4"
-            type="video/mp4"
-            srclang="vi"
-          />
-          Your browser not support this video
-        </video>
-      </div>
+        <!-- Footer -->
+        <div id="footer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#0099ff"
+                    fill-opacity="1"
+                    d="M0,128L48,128C96,128,192,128,288,122.7C384,117,480,107,576,112C672,117,768,139,864,156.7C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                ></path>
+            </svg>
 
-      <!-- Banner 2 -->
-      <div class="banner-2">
-        <div class="banner-2__container">
-          <p class="banner-2__title-1">Giá trị cốt lõi</p>
-          <hr />
-          <p class="banner-2__description">
-            “Trở thành biểu tượng niềm tin hàng đầu Việt Nam về sản phẩm dinh
-            dưỡng và sức khỏe phục vụ cuộc sống con người “
-          </p>
+            <div class="contact">
+                <p>For more infomation. Please contact us by</p>
+                <ul>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-facebook"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-instagram"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-github"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-regular fa-envelope"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                    <li>
+                        <span
+                            ><i
+                                class="fa-brands fa-twitter"
+                                aria-hidden="true"
+                            ></i
+                        ></span>
+                    </li>
+                </ul>
+            </div>
 
-          <div class="images">
-            <!-- Image 1 -->
-            <span
-              ><img
-                loading="lazy"
-                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_1.png"
-                alt="hinhanhgioithieu1"
-              />
-              <div class="image-body">
-                <p class="image-title">Chính trực</p>
-                <p class="image-description">
-                  Liêm chính, Trung thực trong ứng xử và trong tất cả các giao
-                  dịch.
-                </p>
-              </div>
-            </span>
-
-            <!-- Image 2 -->
-            <span
-              ><img
-                loading="lazy"
-                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_2.png"
-                alt="hinhanhgioithieu1"
-              />
-              <div class="image-body">
-                <p class="image-title">tôn trọng</p>
-                <p class="image-description">
-                  Tôn trọng bản thân, Tôn trọng đồng nghiệp, Tôn trọng Công ty,
-                  Tôn trọng đối tác, Hợp tác trong sự tôn trọng.
-                </p>
-              </div>
-            </span>
-
-            <!-- Image 3 -->
-            <span
-              ><img
-                loading="lazy"
-                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_3.png"
-                alt="hinhanhgioithieu1"
-              />
-              <div class="image-body">
-                <p class="image-title">công bằng</p>
-                <p class="image-description">
-                  Công bằng với nhân viên, khách hàng, nhà cung cấp và các bên
-                  liên quan khác.
-                </p>
-              </div>
-            </span>
-
-            <!-- Image 4 -->
-            <span
-              ><img
-                loading="lazy"
-                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_4.png"
-                alt="hinhanhgioithieu1"
-              />
-              <div class="image-body">
-                <p class="image-title">đạo đức</p>
-                <p class="image-description">
-                  Tôn trọng các tiêu chuẩn đã được thiết lập và hành động một
-                  cách đạo đức.
-                </p>
-              </div>
-            </span>
-
-            <!-- Image 5 -->
-            <span
-              ><img
-                loading="lazy"
-                src="https://www.vinamilk.com.vn/static/images/icon/tq_img_5.png"
-                alt="hinhanhgioithieu1"
-              />
-              <div class="image-body">
-                <p class="image-title">tuân thủ</p>
-                <p class="image-description">
-                  Tuân thủ Luật pháp, Bộ Quy Tắc Ứng Xử và các quy chế, chính
-                  sách, quy định của Công ty.
-                </p>
-              </div>
-            </span>
-          </div>
+            <div class="copyright">
+                <span>
+                    <i>&copy;by nguyentrangiabao | </i>
+                    <i>SĐT: 010010001001101</i>
+                </span>
+                <a href="./Contact.html">Liên hệ chúng tôi</a>
+            </div>
         </div>
-      </div>
-
-      <a href="#navbar" class="go-top">
-        <img src="./assests/images/top.png" alt="" />
-      </a>
-    </div>
-
-    <!-- Footer -->
-    <div id="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0099ff"
-          fill-opacity="1"
-          d="M0,128L48,128C96,128,192,128,288,122.7C384,117,480,107,576,112C672,117,768,139,864,156.7C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-
-      <div class="contact">
-        <p>For more infomation. Please contact us by</p>
-        <ul>
-          <li>
-            <span
-              ><i class="fa-brands fa-facebook" aria-hidden="true"></i
-            ></span>
-          </li>
-          <li>
-            <span
-              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
-            ></span>
-          </li>
-          <li>
-            <span><i class="fa-brands fa-github" aria-hidden="true"></i></span>
-          </li>
-          <li>
-            <span
-              ><i class="fa-regular fa-envelope" aria-hidden="true"></i
-            ></span>
-          </li>
-          <li>
-            <span><i class="fa-brands fa-twitter" aria-hidden="true"></i></span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="copyright">
-        <span>
-          <i>&copy;by nguyentrangiabao | </i>
-          <i>SĐT: 010010001001101</i>
-        </span>
-        <a href="./Contact.html">Liên hệ chúng tôi</a>
-      </div>
-    </div>
-  </body>
-  <script src="./handle-action/handleScroll.js"></script>
+    </body>
+    <script src="./handle-action/handleScroll.js"></script>
+    <script src="./handle-action/handleSearch.js"></script>
+    <script src="./validation/validationSearch.js"></script>
 </html>

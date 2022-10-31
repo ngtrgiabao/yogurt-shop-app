@@ -1,0 +1,53 @@
+.about-container {
+    margin: 20rem 4rem !important;
+}
+
+.banner-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50rem;
+    padding: 1.8rem;
+    margin: 10rem 0;
+    border-radius: 1rem;
+    background-color: #325ef0 !important;
+}
+
+.banner-1 .banner-1__title {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+}
+
+.banner-1 .banner-1__title p {
+    color: white;
+}
+
+.banner-1 .banner-1__title .title-1,
+.banner-1 .banner-1__title .title-2 {
+    text-transform: uppercase;
+}
+
+.banner-1 .banner-1__title .title-1 {
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.banner-1 .banner-1__title .title-2 {
+    font-size: 5em;
+}
+
+.banner-1 .banner-1__title .banner-1__desription {
+    font-size: 1.5em;
+    padding-top: 1rem;
+    font-weight: normal;
+}
+
+.banner-1 .banner-1__title .banner-1__desription a {
+    color: black;
+    text-decoration: underline;
+}
+
+.banner-1 .banner-1__title .banner-1__desription a:hover {
+    color: aquamarine;
+}

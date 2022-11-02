@@ -1,26 +1,12 @@
-// const removeCartItemButtons = document.getElementsByClassName("remove");
-// for (const element of removeCartItemButtons) {
-//     const button = element;
-//     button.addEventListener("click", (e) => {
-//         const buttonClicked = e.target;
-//         buttonClicked.parentElement.parentElement.remove();
-//         updateCartTotal();
-//     });
-// }
-
-const updateCartTotal = () => {
-    // const cartItemContainer = document.getElementsByClassName("product")[0];
-    // const cartRows =
-    //     cartItemContainer.getElementsByClassName("product-item-row");
-    // for (const element of cartRows) {
-    //     let cartRow = element;
-    //     let priceElement = cartRow.getElementsByClassName("product-price")[0];
-    //     let quantityElement = cartRow.getElementsByClassName("product-nums")[0];
-    //     console.log(priceElement, quantityElement);
-    // }
-    // window.localStorage.removeItem("code", 100);
-    // console.log(cartItemContainer);
-};
+const removeCartItemButtons = document.getElementsByClassName("remove");
+for (const element of removeCartItemButtons) {
+    const button = element;
+    button.addEventListener("click", (e) => {
+        const buttonClicked = e.target;
+        buttonClicked.parentElement.parentElement.remove();
+        updateCartTotal();
+    });
+}
 
 const add = () => {
     let value = document.querySelector(".product-nums").value;
@@ -32,55 +18,75 @@ const add = () => {
         value: value,
     });
     localStorage.setItem("key", valueJSON);
-
-    console.log(localStorage.getItem("key"));
 };
 
 const remove = () => {
     let value = document.querySelector(".product-nums").value;
-    value--;
 
     let valueJSON = JSON.stringify({
         name: "hello",
         value: value,
     });
 
-    if (value < 0) {
+    if (value <= 0) {
+        document.querySelector(".product-nums").value = 0;
         localStorage.removeItem("key", valueJSON);
     } else {
         localStorage.setItem("key", valueJSON);
+        value--;
     }
 
     document.querySelector(".product-nums").value = value;
-
-    console.log(localStorage.getItem("key"));
 };
 
-const s = document.querySelector(".product-wrapper");
-const ss = JSON.parse(localStorage.getItem("sp005"));
+// const addBtn = document.querySelector(".add").addEventListener("click", add);
+// const removeBtn = document.addEventListener("click", remove);
 
-s.innerHTML = `<div class="product-item">
-                            <div class="product-item-name">
-                                <label class="product-item-title"
-                                    >${ss[1]}</label
-                                >
+const productWrapper = document.querySelector(".product-wrapper");
 
-                                <i onclick="localStorage.removeItem(ss)"
-                                    class="fa-solid fa-xmark remove"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-                            <div class="quantity">
-                                <label for=""
-                                    >Số lượng (lốc) - 20.000 vnd / lốc
-                                </label>
-                                <br />
-                                <input
-                                    class="product-nums"
-                                    type="number"
-                                    value="0"
-                                />                               
-                            </div>
-                        </div>`;
-//  <button onclick="add()">clickk</button>
-//  <button onclick="remove()">clickka</button>
+const localStorageLength = localStorage.length;
+let value = 0;
+
+for (let i = 0; i < localStorageLength; i++) {
+    const key = localStorage.getItem(localStorage.key(i));
+    const data = key.split(",");
+    const priceString = data[2].replace("]", "");
+    const title = data[1].replace('"', "").replace('"', "");
+    const price = parseInt(priceString, 10);
+
+    let arr = [];
+
+    arr.push(localStorage.key(i).slice("0", "5"));
+
+    // productWrapper.innerHTML = `<div class="product-item">
+    //                         <div class="product-item-name">
+    //                             <label class="product-item-title"
+    //                                 >${title}</label
+    //                             >
+
+    //                             <i
+    //                                 class="fa-solid fa-xmark remove"
+    //                                 aria-hidden="true"
+    //                             ></i>
+    //                         </div>
+    //                         <div class="quantity">
+    //                             <label for=""
+    //                                 >Số lượng (lốc) - 20.000 vnd / lốc
+    //                             </label>
+    //                             <br />
+    //                             <input
+    //                                 class="product-nums"
+    //                                 type="number"
+    //                                 value="0"
+    //                             />
+    //                         </div>
+    //                     </div>`;
+    console.log(arr.sort());
+
+    value += price;
+}
+
+const total = document.querySelector(".total");
+window.onload = () => {
+    total.innerText = value;
+};

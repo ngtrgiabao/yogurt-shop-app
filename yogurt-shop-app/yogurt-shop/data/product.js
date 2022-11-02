@@ -66,7 +66,8 @@ const productList = [
 
 const products = document.querySelector(".products");
 const s = document.querySelector(".product-wrapper");
-console.log(products);
+
+const cartNums = document.querySelector(".cart-nums");
 
 const addCart = (index) => {
     const data = [];
@@ -77,12 +78,19 @@ const addCart = (index) => {
     ];
 
     data.push(...product);
-    localStorage.setItem(productList[index].id, JSON.stringify(data));
+    localStorage.setItem(
+        productList[index].id + " - " + Math.random(),
+        JSON.stringify(data)
+    );
 
-    const ss = JSON.parse(localStorage.getItem(productList[index].id));
-    s.innerHTML = `<b>${ss[1]}</b>`;
+    let value = localStorage.length;
+    cartNums.innerText = value;
+};
 
-    console.log(s);
+let value = localStorage.length;
+
+window.onload = () => {
+    cartNums.innerText = value;
 };
 
 products.innerHTML = productList
@@ -107,13 +115,10 @@ products.innerHTML = productList
                                     >${item.price} <span class="vnd"> VND </span>
                                 </span>
     
-                                <a href = "./Buy.html";>
-                                    <button onclick="addCart(${index})" type="submit">Đặt mua</button>
-                                </a>
+                                <button onclick="addCart(${index})" type="submit">Đặt mua</button>
                             </div>
                         </div>
                     </section>
     `
     )
     .join("");
-//

@@ -46,12 +46,12 @@
     margin-top: 0.6rem;
 }
 
-.product-item-row a {
+/* .product-item-row a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 10rem;
-}
+} */
 
 .product-item-row .buy-btn {
     margin-top: 2rem;
@@ -72,7 +72,7 @@
 }
 
 .product-item-row button {
-    width: 100%;
+    width: 40%;
     padding: 1rem;
     border-radius: 1rem;
     background-color: #0b70f4ca;
@@ -106,3 +106,4 @@
 .show {
     display: block !important;
 }
+

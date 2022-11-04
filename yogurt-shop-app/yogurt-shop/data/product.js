@@ -108,21 +108,12 @@ window.onload = () => {
 const getIndex = (id) => cart.indexOf(cart.find((item) => item.id === id));
 
 const addCart = (id) => {
-    if (productList[id].count > 0) {
-        cart.push({
-            id: productList[id].id,
-            name: productList[id].name,
-            price: productList[id].price,
-            count: productList[id].count + 1,
-        });
-    } else {
-        cart.push({
-            id: productList[id].id,
-            name: productList[id].name,
-            price: productList[id].price,
-            count: productList[id].count,
-        });
-    }
+    cart.push({
+        id: productList[id].id,
+        name: productList[id].name,
+        price: productList[id].price,
+        count: productList[id].count,
+    });
     localStorage.setItem("cart", JSON.stringify(cart));
 
     const value = JSON.parse(localStorage.getItem("cart")).length;

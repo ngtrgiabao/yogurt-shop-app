@@ -73,9 +73,6 @@ const productList = [
     },
 ];
 
-const products = document.querySelector(".products");
-const s = document.querySelector(".product-wrapper");
-
 // const addCart = (index) => {
 //     const data = [];
 //     const product = [
@@ -94,19 +91,26 @@ const s = document.querySelector(".product-wrapper");
 //     cartNums.innerText = value;
 // };
 
-let cart = localStorage.getItem("cart")
-    ? JSON.parse(localStorage.getItem("cart"))
-    : [];
+const products = document.querySelector(".products");
+const s = document.querySelector(".product-wrapper");
 
 const cartNums = document.querySelector(".cart-nums");
 
+// Lay do dai localStorage
 const value = JSON.parse(localStorage.getItem("cart")).length;
 window.onload = () => {
     cartNums.innerText = value;
 };
 
+// Lay du lieu localStorage
+let cart = localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [];
+
+// Tim san pham theo id
 const getIndex = (id) => cart.indexOf(cart.find((item) => item.id === id));
 
+// Them san pham vao localStorage
 const addCart = (id) => {
     cart.push({
         id: productList[id].id,
@@ -120,6 +124,7 @@ const addCart = (id) => {
     cartNums.innerText = value;
 };
 
+// Xoa san pham trong localStorage
 const removeCart = (id) => {
     getIndex(productList[id].id) > -1
         ? cart.splice(getIndex(productList[id].id), 1)
@@ -129,6 +134,7 @@ const removeCart = (id) => {
     cartNums.innerText = value;
 };
 
+// In san pham tu localStorage sang html
 products.innerHTML = productList
     .map(
         (item, index) =>
@@ -160,4 +166,3 @@ products.innerHTML = productList
     `
     )
     .join("");
-//

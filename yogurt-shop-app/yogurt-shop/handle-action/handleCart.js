@@ -42,51 +42,65 @@ const remove = () => {
 // const addBtn = document.querySelector(".add").addEventListener("click", add);
 // const removeBtn = document.addEventListener("click", remove);
 
-const productWrapper = document.querySelector(".product-wrapper");
+const removeCart = (id) => {
+    const key = JSON.parse(localStorage.getItem("cart"));
 
-const localStorageLength = localStorage.length;
-let value = 0;
+    key.splice(id, 1);
 
-for (let i = 0; i < localStorageLength; i++) {
-    const key = localStorage.getItem(localStorage.key(i));
-    const data = key.split(",");
-    const priceString = data[2].replace("]", "");
-    const title = data[1].replace('"', "").replace('"', "");
-    const price = parseInt(priceString, 10);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    let value = localStorage.length;
+    cartNums.innerText = value;
+};
 
+window.onload = () => {
+    const total = document.querySelector(".total");
+    const productWrapper = document.querySelector(".product-wrapper");
+    const key = JSON.parse(localStorage.getItem("cart"));
+    let value = 0;
     let arr = [];
 
-    arr.push(localStorage.key(i).slice("0", "5"));
+    for (let i = 0; i < key.length; i++) {
+        const priceData = key;
+        const priceString = priceData[i].price;
+        const price = parseInt(priceString, 10);
 
-    // productWrapper.innerHTML = `<div class="product-item">
-    //                         <div class="product-item-name">
-    //                             <label class="product-item-title"
-    //                                 >${title}</label
-    //                             >
+        console.log(priceString);
 
-    //                             <i
-    //                                 class="fa-solid fa-xmark remove"
-    //                                 aria-hidden="true"
-    //                             ></i>
-    //                         </div>
-    //                         <div class="quantity">
-    //                             <label for=""
-    //                                 >Số lượng (lốc) - 20.000 vnd / lốc
-    //                             </label>
-    //                             <br />
-    //                             <input
-    //                                 class="product-nums"
-    //                                 type="number"
-    //                                 value="0"
-    //                             />
-    //                         </div>
-    //                     </div>`;
-    console.log(arr.sort());
+        const cart = JSON.parse(localStorage.getItem("cart"));
 
-    value += price;
-}
+        value += price;
 
-const total = document.querySelector(".total");
-window.onload = () => {
-    total.innerText = value;
+        productWrapper.innerHTML = cart
+            .map(
+                (item) => `<div class="product-item">
+                            <div class="product-item-name">
+                                <label class="product-item-title"
+                                    >${item.name}</label
+                                >
+
+                                <i onclick="removeCart(${item.id})"
+                                    class="fa-solid fa-xmark remove"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+                            <div class="quantity">
+                                <label for=""
+                                    >Số lượng:
+                                </label>
+                                <input
+                                    class="product-nums"
+                                    type="number"
+                                    value="0"
+                                />
+                            </div>
+                        </div>`
+            )
+            .join("");
+
+        arr.push(key[i].name);
+    }
+
+    console.log(Object.values(arr).sort());
+
+    total.innerHTML = value;
 };

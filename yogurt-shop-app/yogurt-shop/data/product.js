@@ -67,30 +67,58 @@ const productList = [
 const products = document.querySelector(".products");
 const s = document.querySelector(".product-wrapper");
 
-const cartNums = document.querySelector(".cart-nums");
+// const addCart = (index) => {
+//     const data = [];
+//     const product = [
+//         productList[index].id,
+//         productList[index].name,
+//         productList[index].price,
+//     ];
 
-const addCart = (index) => {
-    const data = [];
-    const product = [
-        productList[index].id,
-        productList[index].name,
-        productList[index].price,
-    ];
+//     data.push(...product);
+//     localStorage.setItem(
+//         productList[index].id + " - " + Math.random(),
+//         JSON.stringify(data)
+//     );
 
-    data.push(...product);
-    localStorage.setItem(
-        productList[index].id + " - " + Math.random(),
-        JSON.stringify(data)
-    );
+//     let value = localStorage.length;
+//     cartNums.innerText = value;
+// };
 
-    let value = localStorage.length;
-    cartNums.innerText = value;
-};
+let cart = localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [];
 
 let value = localStorage.length;
+const cartNums = document.querySelector(".cart-nums");
 
 window.onload = () => {
     cartNums.innerText = value;
+};
+
+console.log(value);
+
+const getIndex = (id) => cart.indexOf(cart.find((item) => item.id === id));
+
+const addCart = (id) => {
+    cart.push({
+        id: productList[id].id,
+        name: productList[id].name,
+        price: productList[id].price,
+    });
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    cartNums.innerHTML = value;
+    console.log(cartNums);
+};
+
+const removeCart = (id) => {
+    getIndex(productList[id].id) > -1
+        ? cart.splice(getIndex(productList[id].id), 1)
+        : "";
+    localStorage.setItem("cart", JSON.stringify(cart));
+    cartNums.innerHTML = value;
+    console.log(cartNums);
 };
 
 products.innerHTML = productList
@@ -119,6 +147,8 @@ products.innerHTML = productList
                             </div>
                         </div>
                     </section>
+
+                    <button onclick="removeCart(${index})">clickme</button>
     `
     )
     .join("");

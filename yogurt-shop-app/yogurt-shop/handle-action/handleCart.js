@@ -8,99 +8,64 @@ for (const element of removeCartItemButtons) {
     });
 }
 
-const add = () => {
-    let value = document.querySelector(".product-nums").value;
-    value++;
-    document.querySelector(".product-nums").value = value;
-
-    let valueJSON = JSON.stringify({
-        name: "hello",
-        value: value,
-    });
-    localStorage.setItem("key", valueJSON);
-};
-
-const remove = () => {
-    let value = document.querySelector(".product-nums").value;
-
-    let valueJSON = JSON.stringify({
-        name: "hello",
-        value: value,
-    });
-
-    if (value <= 0) {
-        document.querySelector(".product-nums").value = 0;
-        localStorage.removeItem("key", valueJSON);
-    } else {
-        localStorage.setItem("key", valueJSON);
-        value--;
-    }
-
-    document.querySelector(".product-nums").value = value;
-};
-
-// const addBtn = document.querySelector(".add").addEventListener("click", add);
-// const removeBtn = document.addEventListener("click", remove);
-
-const removeCart = (id) => {
-    const key = JSON.parse(localStorage.getItem("cart"));
-
-    key.splice(id, 1);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-    let value = localStorage.length;
-    cartNums.innerText = value;
-};
-
-window.onload = () => {
+const showCartItem = () => {
     const total = document.querySelector(".total");
-    const productWrapper = document.querySelector(".product-wrapper");
-    const key = JSON.parse(localStorage.getItem("cart"));
+
     let value = 0;
     let arr = [];
+    const localLength = localStorage.length;
 
-    for (let i = 0; i < key.length; i++) {
-        const priceData = key;
-        const priceString = priceData[i].price;
-        const price = parseInt(priceString, 10);
+    const productWrapper = document.querySelector(".product-wrapper");
 
-        console.log(priceString);
-
-        const cart = JSON.parse(localStorage.getItem("cart"));
-
+    for (let i = 0; i < localLength; i++) {
+        const indexLocalStorage = localStorage.key(i);
+        const cart = JSON.parse(localStorage.getItem(indexLocalStorage));
+        const price = parseInt(cart.price * cart.count);
         value += price;
+        arr.push({
+            name: cart.name,
+            count: cart.count,
+            id: indexLocalStorage,
+        });
 
-        productWrapper.innerHTML = cart
+        productWrapper.innerHTML = arr
             .map(
-                (item) => `<div class="product-item">
+                (item, index) => `<div class="product-item" id="${item.id}">
                             <div class="product-item-name">
                                 <label class="product-item-title"
                                     >${item.name}</label
                                 >
-
-                                <i onclick="removeCart(${item.id})"
+                                <i onclick="removeCart('${index}')"
                                     class="fa-solid fa-xmark remove"
                                     aria-hidden="true"
                                 ></i>
                             </div>
                             <div class="quantity">
                                 <label for=""
-                                    >Số lượng:
-                                </label>
-                                <input
-                                    class="product-nums"
-                                    type="number"
-                                    value="0"
-                                />
+                                    >Số lượng: 
+                                </label>        
+                                <span>${item.count}</span>                     
                             </div>
-                        </div>`
+                        </div>
+                        `
             )
             .join("");
-
-        arr.push(key[i].name);
     }
 
-    console.log(Object.values(arr).sort());
-
     total.innerHTML = value;
+};
+
+const removeCart = (id) => {
+    const key = localStorage.key(id);
+
+    let x = document.getElementById(key);
+    x.remove(x);
+
+    localStorage.removeItem(key);
+
+    showCartItem();
+};
+
+window.onload = () => {
+    showCartItem();
 };

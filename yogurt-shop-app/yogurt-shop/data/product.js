@@ -73,68 +73,50 @@ const productList = [
     },
 ];
 
-// const addCart = (index) => {
-//     const data = [];
-//     const product = [
-//         productList[index].id,
-//         productList[index].name,
-//         productList[index].price,
-//     ];
-
-//     data.push(...product);
-//     localStorage.setItem(
-//         productList[index].id + " - " + Math.random(),
-//         JSON.stringify(data)
-//     );
-
-//     let value = localStorage.length;
-//     cartNums.innerText = value;
-// };
-
 const products = document.querySelector(".products");
-const s = document.querySelector(".product-wrapper");
 
 const cartNums = document.querySelector(".cart-nums");
 
 // Lay do dai localStorage
-const value = JSON.parse(localStorage.getItem("cart")).length;
 window.onload = () => {
-    cartNums.innerText = value;
+    cartNums.innerText = localStorage.length;
 };
 
-// Lay du lieu localStorage
-let cart = localStorage.getItem("cart")
-    ? JSON.parse(localStorage.getItem("cart"))
-    : [];
+const addCart = (productId) => {
+    const countInput =
+        document.getElementById(productList[productId].id).value || 0;
+    const productListID = productList[productId].id;
 
-// Tim san pham theo id
-const getIndex = (id) => cart.indexOf(cart.find((item) => item.id === id));
+    if (countInput > 100) {
+        alert("Bạn không thể đặt hơn 100 sản phẩm :<");
+        document.getElementById(productListID).value = "";
+    } else {
+        localStorage.setItem(
+            productListID,
+            JSON.stringify({
+                name: productList[productId].name,
+                price: productList[productId].price,
+                count:
+                    countInput < 0
+                        ? Math.abs(countInput)
+                        : parseInt(countInput),
+            })
+        );
 
-// Them san pham vao localStorage
-const addCart = (id) => {
-    cart.push({
-        id: productList[id].id,
-        name: productList[id].name,
-        price: productList[id].price,
-        count: productList[id].count,
-    });
-    localStorage.setItem("cart", JSON.stringify(cart));
+        document.getElementById(productListID).value = "";
+    }
 
-    const value = JSON.parse(localStorage.getItem("cart")).length;
-    cartNums.innerText = value;
+    const localLength = localStorage.length;
+    cartNums.innerText = localLength;
 };
 
-// Xoa san pham trong localStorage
 const removeCart = (id) => {
-    getIndex(productList[id].id) > -1
-        ? cart.splice(getIndex(productList[id].id), 1)
-        : "";
-    const value = JSON.parse(localStorage.getItem("cart")).length;
-    localStorage.setItem("cart", JSON.stringify(cart));
-    cartNums.innerText = value;
+    localStorage.removeItem(productList[id].id);
+
+    const localLength = localStorage.length;
+    cartNums.innerText = localLength;
 };
 
-// In san pham tu localStorage sang html
 products.innerHTML = productList
     .map(
         (item, index) =>
@@ -156,13 +138,12 @@ products.innerHTML = productList
                                 <span class="product-price"
                                     >${item.price} <span class="vnd"> VND </span>
                                 </span>
-    
-                                <button onclick="addCart(${index})" type="submit">Đặt mua</button>
+                                <span>
+                                    <input type="number" max="100" placeholder="0" class="count" id="${item.id}"/>
+                                    <button onclick="addCart(${index})" type="submit">Đặt mua</button>
+                                </span>
                             </div>
                         </div>
-                    </section>
-
-                    <button onclick="removeCart(${index})">clickme</button>
-    `
+                    </section>    `
     )
     .join("");

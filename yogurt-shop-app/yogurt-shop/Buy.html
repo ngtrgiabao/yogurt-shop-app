@@ -95,6 +95,7 @@
                                     </div>
 
                                     <div class="remember-psw">
+                                        <input type="checkbox" />
                                         <label for=""
                                             >Ghi nhớ cho lần đăng nhập
                                             sau?</label
@@ -112,6 +113,7 @@
             </nav>
         </header>
 
+        <!-- Container -->
         <div class="buy-container">
             <img
                 src="https://i.pinimg.com/originals/4f/32/af/4f32afae008fb7b33af86b5262fc1f6d.gif"
@@ -172,7 +174,26 @@
                         ></textarea>
                     </div>
 
-                    <p>Tổng tiền: <span class="total">0</span>vnd</p>
+                    <div style="width: 100%">
+                        <p>Tổng tiền(A) =<span class="total">0</span>vnd</p>
+                        <p>
+                            Chiết khấu(B) = 0.1 x A =<span
+                                class="total discount"
+                                >0</span
+                            >vnd
+                        </p>
+                        <p>
+                            Thuế(C) = 10% x (A - B) =<span class="total tax"
+                                >0</span
+                            >vnd
+                        </p>
+                        <p>
+                            Tổng đơn hàng = A - B + C =<span
+                                class="total total-orders"
+                                >0</span
+                            >vnd
+                        </p>
+                    </div>
 
                     <a href="./index.html">
                         <input

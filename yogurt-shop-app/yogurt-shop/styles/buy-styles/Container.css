@@ -58,6 +58,12 @@
     min-width: 10rem;
 }
 
+.product-container .product-wrapper .product-item img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
 .product-container .product-wrapper .product-item-name {
     display: flex;
     align-items: center;

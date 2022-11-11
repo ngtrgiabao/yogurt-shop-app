@@ -87,6 +87,7 @@ const addCart = (productId) => {
         document.getElementById(productList[productId].id).value || 0;
     const productListID = productList[productId].id;
 
+    // Kiem tra so luong đat san pham
     if (countInput > 100) {
         alert("Bạn không thể đặt hơn 100 sản phẩm :<");
         document.getElementById(productListID).value = "";
@@ -96,6 +97,7 @@ const addCart = (productId) => {
             JSON.stringify({
                 name: productList[productId].name,
                 price: productList[productId].price,
+                photo: productList[productId].photo,
                 count:
                     countInput < 0
                         ? Math.abs(countInput)
@@ -103,6 +105,7 @@ const addCart = (productId) => {
             })
         );
 
+        // Reset input ve 0 khi xac nhan mua
         document.getElementById(productListID).value = "";
     }
 

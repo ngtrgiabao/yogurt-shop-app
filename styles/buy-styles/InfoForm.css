@@ -1,0 +1,62 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+form fieldset {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #0099ff;
+    padding: 2rem;
+}
+
+form fieldset legend {
+    margin-bottom: 0 !important;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 8rem;
+    color: #0033ff;
+    position: relative;
+}
+
+.buy-form form input,
+.buy-form form textarea {
+    width: 70rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(172, 170, 170);
+}
+
+.buy-form form input:focus,
+.buy-form form textarea:focus {
+    border: 2px solid #0434d2;
+}
+
+form .submit-btn {
+    width: 15rem;
+    height: 4rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #0099ff;
+    box-shadow: 5px 4px 2px #0000003d;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+
+form .submit-btn:hover {
+    background-color: #fff;
+    color: black;
+    border: 1px solid #0434d2;
+    scale: 0.95;
+}

@@ -1,0 +1,72 @@
+#footer {
+    margin-top: 10rem;
+    position: relative;
+    color: white;
+}
+
+.banner-2 {
+    margin-top: 10rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#footer svg {
+    bottom: 0;
+    left: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+#footer .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4.5rem;
+    height: 24rem;
+}
+
+#footer .contact p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#footer .contact ul {
+    display: flex;
+    list-style: none;
+}
+
+#footer .contact ul li {
+    margin: 2rem 2rem -2rem;
+}
+
+#footer .contact ul span {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 5px 4px 2px #0000003d;
+    transition: all 0.5s ease;
+}
+
+#footer .contact ul span:hover {
+    background-color: white;
+    color: #0434d2;
+    scale: 0.9;
+}
+
+#footer .contact ul li i {
+    font-size: 2.5rem;
+}
+
+#footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0 2rem;
+    bottom: 1rem;
+    position: relative;
+}
